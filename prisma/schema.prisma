@@ -82,5 +82,7 @@ model Messages{
   reciever User  @relation("Reciever",fields: [recieverId] ,references: [userId])
   recieverId String
   message String
+  read  Boolean @default(false)
+  timestamp DateTime @default(now())
 
 }
