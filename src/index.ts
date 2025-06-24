@@ -4,6 +4,9 @@ import cors from 'cors'
 import { Server } from 'socket.io'
 import { createClient, RedisClientType } from "redis";
 import { client } from "./db";
+import dotenv from "dotenv"
+
+dotenv.config()
 
 const app = express();
 app.use(express.json());
